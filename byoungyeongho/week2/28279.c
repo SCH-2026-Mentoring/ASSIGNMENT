@@ -175,6 +175,6 @@ int main()
 			pl(dec);
 		}
 	}
-
+// 설명만 잘 하면 될 듯.
 	return 0;
 }
