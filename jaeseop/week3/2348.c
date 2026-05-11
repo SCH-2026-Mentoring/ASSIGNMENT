@@ -41,8 +41,7 @@ int main(void) {
     int N, K;
     scanf("%d", &N);
     if ( N < 1) {   // N이 1보다 작을 시 
-        printf("해당 숫자는 유효하지 않습니다.\n");
-        exit(1);
+        error("해당 숫자는 유효하지 않습니다.\n");
     }
 
 
@@ -51,8 +50,8 @@ int main(void) {
         if (head == NULL) {
             head = (ListNode*)malloc(sizeof(ListNode));
             if (head == NULL) error("메모리 할당 실패");
-            head->id = i;
-            head->data = K;
+            head->id = i;   // 풍선 번호
+            head->data = K; // 풍선에 들어갈 정수
             head->rlink = head;
             head->llink = head;
         }
